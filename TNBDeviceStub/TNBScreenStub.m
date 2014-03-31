@@ -82,6 +82,7 @@ static BOOL tnb_screen_exchanged;
 
 + (void)replace
 {
+    tnb_currentScreen = nil;
     if (tnb_screen_exchanged) {
         return;
     }

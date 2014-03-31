@@ -103,6 +103,7 @@ static BOOL tnb_device_exchanged;
 
 + (void)replace
 {
+    tnb_currentDevice = nil;
     if (tnb_device_exchanged) {
         return;
     }
@@ -111,7 +112,7 @@ static BOOL tnb_device_exchanged;
 
 + (void)restore
 {
-//    tnb_currentDevice = nil;
+    tnb_currentDevice = nil;
     if (!tnb_device_exchanged) {
         return;
     }
