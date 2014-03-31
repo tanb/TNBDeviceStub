@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A76F5E2D18E8B0B800984509 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76F5E2C18E8B0B800984509 /* XCTest.framework */; };
+		A76F5E2F18E8B0B800984509 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76F5E2E18E8B0B800984509 /* Foundation.framework */; };
+		A76F5E3118E8B0B800984509 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76F5E3018E8B0B800984509 /* UIKit.framework */; };
+		A76F5E3718E8B0B800984509 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A76F5E3518E8B0B800984509 /* InfoPlist.strings */; };
+		A76F5E3918E8B0B800984509 /* TNBDeviceStubTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A76F5E3818E8B0B800984509 /* TNBDeviceStubTest.m */; };
+		A76F5E4418E8B13300984509 /* TNBDeviceStub.m in Sources */ = {isa = PBXBuildFile; fileRef = A76F5E4318E8B13300984509 /* TNBDeviceStub.m */; };
+		A76F5E4718E8CA6300984509 /* TNBScreenStub.m in Sources */ = {isa = PBXBuildFile; fileRef = A76F5E4618E8CA6300984509 /* TNBScreenStub.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A76F5E2918E8B0B700984509 /* TNBDeviceStubTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNBDeviceStubTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A76F5E2C18E8B0B800984509 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		A76F5E2E18E8B0B800984509 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A76F5E3018E8B0B800984509 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A76F5E3418E8B0B800984509 /* TNBDeviceStubTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TNBDeviceStubTest-Info.plist"; sourceTree = "<group>"; };
+		A76F5E3618E8B0B800984509 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A76F5E3818E8B0B800984509 /* TNBDeviceStubTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNBDeviceStubTest.m; sourceTree = "<group>"; };
+		A76F5E3A18E8B0B800984509 /* TNBDeviceStubTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNBDeviceStubTest-Prefix.pch"; sourceTree = "<group>"; };
+		A76F5E4218E8B13300984509 /* TNBDeviceStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNBDeviceStub.h; path = TNBDeviceStub/TNBDeviceStub.h; sourceTree = SOURCE_ROOT; };
+		A76F5E4318E8B13300984509 /* TNBDeviceStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNBDeviceStub.m; path = TNBDeviceStub/TNBDeviceStub.m; sourceTree = SOURCE_ROOT; };
+		A76F5E4518E8CA6300984509 /* TNBScreenStub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNBScreenStub.h; path = TNBDeviceStub/TNBScreenStub.h; sourceTree = SOURCE_ROOT; };
+		A76F5E4618E8CA6300984509 /* TNBScreenStub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNBScreenStub.m; path = TNBDeviceStub/TNBScreenStub.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A76F5E2618E8B0B700984509 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76F5E2D18E8B0B800984509 /* XCTest.framework in Frameworks */,
+				A76F5E3118E8B0B800984509 /* UIKit.framework in Frameworks */,
+				A76F5E2F18E8B0B800984509 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A76F5E1E18E8B02200984509 = {
+			isa = PBXGroup;
+			children = (
+				A76F5E4118E8B0E100984509 /* TNBDeviceStub */,
+				A76F5E3218E8B0B800984509 /* TNBDeviceStubTest */,
+				A76F5E2B18E8B0B800984509 /* Frameworks */,
+				A76F5E2A18E8B0B700984509 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A76F5E2A18E8B0B700984509 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A76F5E2918E8B0B700984509 /* TNBDeviceStubTest.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A76F5E2B18E8B0B800984509 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A76F5E2C18E8B0B800984509 /* XCTest.framework */,
+				A76F5E2E18E8B0B800984509 /* Foundation.framework */,
+				A76F5E3018E8B0B800984509 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A76F5E3218E8B0B800984509 /* TNBDeviceStubTest */ = {
+			isa = PBXGroup;
+			children = (
+				A76F5E3818E8B0B800984509 /* TNBDeviceStubTest.m */,
+				A76F5E3318E8B0B800984509 /* Supporting Files */,
+			);
+			path = TNBDeviceStubTest;
+			sourceTree = "<group>";
+		};
+		A76F5E3318E8B0B800984509 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A76F5E3418E8B0B800984509 /* TNBDeviceStubTest-Info.plist */,
+				A76F5E3518E8B0B800984509 /* InfoPlist.strings */,
+				A76F5E3A18E8B0B800984509 /* TNBDeviceStubTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A76F5E4118E8B0E100984509 /* TNBDeviceStub */ = {
+			isa = PBXGroup;
+			children = (
+				A76F5E4218E8B13300984509 /* TNBDeviceStub.h */,
+				A76F5E4318E8B13300984509 /* TNBDeviceStub.m */,
+				A76F5E4518E8CA6300984509 /* TNBScreenStub.h */,
+				A76F5E4618E8CA6300984509 /* TNBScreenStub.m */,
+			);
+			name = TNBDeviceStub;
+			path = TNBDeviceStubTest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A76F5E2818E8B0B700984509 /* TNBDeviceStubTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A76F5E3B18E8B0B800984509 /* Build configuration list for PBXNativeTarget "TNBDeviceStubTest" */;
+			buildPhases = (
+				A76F5E2518E8B0B700984509 /* Sources */,
+				A76F5E2618E8B0B700984509 /* Frameworks */,
+				A76F5E2718E8B0B700984509 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TNBDeviceStubTest;
+			productName = TNBDeviceStubTest;
+			productReference = A76F5E2918E8B0B700984509 /* TNBDeviceStubTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A76F5E1F18E8B02200984509 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = A76F5E2218E8B02200984509 /* Build configuration list for PBXProject "TNBDeviceStub" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A76F5E1E18E8B02200984509;
+			productRefGroup = A76F5E2A18E8B0B700984509 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A76F5E2818E8B0B700984509 /* TNBDeviceStubTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A76F5E2718E8B0B700984509 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76F5E3718E8B0B800984509 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A76F5E2518E8B0B700984509 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A76F5E4418E8B13300984509 /* TNBDeviceStub.m in Sources */,
+				A76F5E3918E8B0B800984509 /* TNBDeviceStubTest.m in Sources */,
+				A76F5E4718E8CA6300984509 /* TNBScreenStub.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A76F5E3518E8B0B800984509 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A76F5E3618E8B0B800984509 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A76F5E2318E8B02200984509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		A76F5E2418E8B02200984509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		A76F5E3C18E8B0B800984509 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNBDeviceStubTest/TNBDeviceStubTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "TNBDeviceStubTest/TNBDeviceStubTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A76F5E3D18E8B0B800984509 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNBDeviceStubTest/TNBDeviceStubTest-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "TNBDeviceStubTest/TNBDeviceStubTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A76F5E2218E8B02200984509 /* Build configuration list for PBXProject "TNBDeviceStub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76F5E2318E8B02200984509 /* Debug */,
+				A76F5E2418E8B02200984509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A76F5E3B18E8B0B800984509 /* Build configuration list for PBXNativeTarget "TNBDeviceStubTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A76F5E3C18E8B0B800984509 /* Debug */,
+				A76F5E3D18E8B0B800984509 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A76F5E1F18E8B02200984509 /* Project object */;
+}
