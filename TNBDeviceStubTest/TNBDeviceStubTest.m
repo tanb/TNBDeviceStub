@@ -191,27 +191,76 @@
     XCTAssertEqual([device class], [UIDevice class], @"couldn't restore UIDevice's method");
 }
 
-- (void)test_replaceAndRestoreCombination
+- (void)test_replaceAndRestoreCombination1
 {
     TNBDeviceStub *stubDevice = [TNBDeviceStub new];
-    [stubDevice replace];
-    XCTAssertEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't replace UIDevice's method");
-    
-    [stubDevice restore];
-    XCTAssertEqualObjects([[UIDevice currentDevice] class], [UIDevice class], @"couldn't restore UIDevice's method");
-    
-    [TNBDeviceStub replace];
-    XCTAssertNotEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't replace UIDevice's method");
-
-    [stubDevice restore];
-    XCTAssertEqualObjects([[UIDevice currentDevice] class], [UIDevice class], @"couldn't restore UIDevice's method");
-
-    [stubDevice replace];
-    XCTAssertEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't replace UIDevice's method");
-
-    [TNBDeviceStub restore];
-    XCTAssertEqualObjects([[UIDevice currentDevice] class], [UIDevice class], @"couldn't restore UIDevice's method");
+    [stubDevice replace]; // custom stub
+    [stubDevice restore]; // restore original
+    [stubDevice replace]; // custom stub
+    XCTAssertEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't replace correctly");
 }
+
+- (void)test_replaceAndRestoreCombination2
+{
+    TNBDeviceStub *stubDevice = [TNBDeviceStub new];
+    [stubDevice replace]; // custom stub
+    [stubDevice restore]; // restore original
+    [TNBDeviceStub replace]; // default stub
+    XCTAssertNotEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't restore correctly");
+}
+
+- (void)test_replaceAndRestoreCombination3
+{
+    TNBDeviceStub *stubDevice = [TNBDeviceStub new];
+    [stubDevice replace]; // custom stub
+    [TNBDeviceStub restore]; // restore original
+    [stubDevice replace]; // custom stub
+    XCTAssertEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't replace correctly");
+}
+
+- (void)test_replaceAndRestoreCombination4
+{
+    TNBDeviceStub *stubDevice = [TNBDeviceStub new];
+    [stubDevice replace]; // custom stub
+    [TNBDeviceStub restore]; // restore original
+    [TNBDeviceStub replace]; // default stub
+    XCTAssertNotEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't restore correctly");
+}
+
+- (void)test_replaceAndRestoreCombination5
+{
+    TNBDeviceStub *stubDevice = [TNBDeviceStub new];
+    [TNBDeviceStub replace]; // default stub
+    [TNBDeviceStub restore]; // restore original
+    [stubDevice replace]; // custom stub
+    XCTAssertEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't replace correctly");
+}
+
+- (void)test_replaceAndRestoreCombination6
+{
+    TNBDeviceStub *stubDevice = [TNBDeviceStub new];
+    [TNBDeviceStub replace]; // default stub
+    [stubDevice restore]; // restore original
+    [stubDevice replace]; // custom stub
+    XCTAssertEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't replace correctly");
+}
+
+- (void)test_replaceAndRestoreCombination7
+{
+    TNBDeviceStub *stubDevice = [TNBDeviceStub new];
+    [stubDevice replace]; // custom stub
+    [TNBDeviceStub replace]; // default stub
+    XCTAssertNotEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't replace correctly");
+}
+
+- (void)test_replaceAndRestoreCombination8
+{
+    TNBDeviceStub *stubDevice = [TNBDeviceStub new];
+    [TNBDeviceStub replace]; // default stub
+    [stubDevice replace]; // custom stub
+    XCTAssertEqualObjects([UIDevice currentDevice], stubDevice, @"couldn't replace correctly");
+}
+
 
 @end
 
@@ -330,7 +379,6 @@
     [stubScreen restore];
     [stubScreen restore];
 
-    
     UIScreen *screen = [UIScreen mainScreen];
     XCTAssertEqual([screen class], [UIScreen class], @"couldn't restore UIScreen's method");
     [[UIScreen screens] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -386,26 +434,98 @@
     }];
 }
 
-- (void)test_replaceAndRestoreCombination
+- (void)test_replaceAndRestoreCombination1
 {
     TNBScreenStub *stubScreen = [TNBScreenStub new];
-    [stubScreen replace];
-    XCTAssertEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't replace UIScreen's method");
-    
-    [stubScreen restore];
-    XCTAssertEqualObjects([[UIScreen mainScreen] class], [UIScreen class], @"couldn't restore UIScreen's method");
-    
-    [TNBScreenStub replace];
-    XCTAssertNotEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't replace UIScreen's method");
-    
-    [stubScreen restore];
-    XCTAssertEqualObjects([[UIScreen mainScreen] class], [UIScreen class], @"couldn't restore UIScreen's method");
-    
-    [stubScreen replace];
-    XCTAssertEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't replace UIScreen's method");
-    
-    [TNBScreenStub restore];
-    XCTAssertEqualObjects([[UIScreen mainScreen] class], [UIScreen class], @"couldn't restore UIScreen's method");
+    [stubScreen replace]; // custom stub
+    [stubScreen restore]; // restore original
+    [stubScreen replace]; // custom stub
+    XCTAssertEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't replace correctly");
+    [[UIScreen screens] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        XCTAssertEqualObjects(obj, stubScreen, @"couldn't replace correctly");
+    }];
+}
+
+- (void)test_replaceAndRestoreCombination2
+{
+    TNBScreenStub *stubScreen = [TNBScreenStub new];
+    [stubScreen replace]; // custom stub
+    [stubScreen restore]; // restore original
+    [TNBScreenStub replace]; // default stub
+    XCTAssertNotEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't restore correctly");
+    [[UIScreen screens] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        XCTAssertNotEqualObjects(obj, stubScreen, @"couldn't replace correctly");
+    }];
+}
+
+- (void)test_replaceAndRestoreCombination3
+{
+    TNBScreenStub *stubScreen = [TNBScreenStub new];
+    [stubScreen replace]; // custom stub
+    [TNBScreenStub restore]; // restore original
+    [stubScreen replace]; // custom stub
+    XCTAssertEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't replace correctly");
+    [[UIScreen screens] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        XCTAssertEqualObjects(obj, stubScreen, @"couldn't replace correctly");
+    }];
+}
+
+- (void)test_replaceAndRestoreCombination4
+{
+    TNBScreenStub *stubScreen = [TNBScreenStub new];
+    [stubScreen replace]; // custom stub
+    [TNBScreenStub restore]; // restore original
+    [TNBScreenStub replace]; // default stub
+    XCTAssertNotEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't restore correctly");
+    [[UIScreen screens] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        XCTAssertNotEqualObjects(obj, stubScreen, @"couldn't replace correctly");
+    }];
+}
+
+- (void)test_replaceAndRestoreCombination5
+{
+    TNBScreenStub *stubScreen = [TNBScreenStub new];
+    [TNBScreenStub replace]; // default stub
+    [TNBScreenStub restore]; // restore original
+    [stubScreen replace]; // custom stub
+    XCTAssertEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't replace correctly");
+    [[UIScreen screens] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        XCTAssertEqualObjects(obj, stubScreen, @"couldn't replace correctly");
+    }];
+}
+
+- (void)test_replaceAndRestoreCombination6
+{
+    TNBScreenStub *stubScreen = [TNBScreenStub new];
+    [TNBScreenStub replace]; // default stub
+    [stubScreen restore]; // restore original
+    [stubScreen replace]; // custom stub
+    XCTAssertEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't replace correctly");
+    [[UIScreen screens] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        XCTAssertEqualObjects(obj, stubScreen, @"couldn't replace correctly");
+    }];
+}
+
+- (void)test_replaceAndRestoreCombination7
+{
+    TNBScreenStub *stubScreen = [TNBScreenStub new];
+    [stubScreen replace]; // custom stub
+    [TNBScreenStub replace]; // default stub
+    XCTAssertNotEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't replace correctly");
+    [[UIScreen screens] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        XCTAssertNotEqualObjects(obj, stubScreen, @"couldn't replace correctly");
+    }];
+}
+
+- (void)test_replaceAndRestoreCombination8
+{
+    TNBScreenStub *stubScreen = [TNBScreenStub new];
+    [TNBScreenStub replace]; // default stub
+    [stubScreen replace]; // custom stub
+    XCTAssertEqualObjects([UIScreen mainScreen], stubScreen, @"couldn't replace correctly");
+    [[UIScreen screens] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        XCTAssertEqualObjects(obj, stubScreen, @"couldn't replace correctly");
+    }];
 }
 
 @end
